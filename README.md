@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# React-Hardware
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Component library for the React framework
 
-## Available Scripts
+## Button
 
-In the project directory, you can run:
+This button component allows for different styling and sizes to be passed using predefined css rules
 
-### `npm start`
+##### Props
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+styleType : for styling rules
+size : button for sizing rules
+onClick : function to handle click event. Default is empty
+children : content displayed within the button (i.e. text)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##### Methods
 
-### `npm test`
+getStyleClass : returns the style class based on styleType
+getSizeClass : returns the size class based on size
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### PropTypes
 
-### `npm run build`
+The button ships with these current options which will default to "default" style and "medium" size if no value or invalid argument is given
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+styleType : primary, secondary, danger, default
+size : small, medium, large
+onClick : must be passed a function
+children : any _required_ content
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Input Field
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This input field component allows easy placement and consistent validation supporting: basic text, password, & email. Validation can be configured to suit specific needs, or extended to allow other types of validation by modifying the validate switch statement
 
-### `npm run eject`
+##### Props
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This component currently accepts: type, and placeholder. label.type defaults to "text", and placeholder defaults to 'Enter value" if nothing is provided
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##### Hooks
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+value : holds the current value of the input field, initialized to an empty string
+error : holds validation messages, initialized to an empty string
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+##### Validation Function
 
-## Learn More
+Currently supports basic text, email, and basic password
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+text : simply checks if the field is empty or not
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+email : checks for valid email format
 
-### Code Splitting
+password : checks that input is greater than 6 characters
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+##### Changes
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+handleChange : event handler that gets called when any input value is changed and updates the value/error state with the new input value
+# React-Hardware
