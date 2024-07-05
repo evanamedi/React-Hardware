@@ -3,6 +3,10 @@ import "./App.css";
 import Title from "./components/title/Title";
 import ButtonPayload from "./components/buttons/ButtonPayload";
 import InputFieldPayload from "./components/inputField/InputFieldPayload";
+import CheckboxPayload from "./components/checkbox/CheckboxPayload";
+import RadioButtonsPayload from "./components/radioButtons/RadioButtonsPayload";
+import TypingEffectPayload from "./components/displayText/TypingEffectPayload";
+import ScatterTextPayload from "./components/displayText/ScatterTextPayload";
 
 function App() {
 	return (
@@ -24,6 +28,10 @@ function App() {
 				<Title />
 				<ButtonPayload />
 				<InputFieldPayload />
+				<CheckboxPayload />
+				<RadioButtonsPayload />
+				<TypingEffectPayload />
+				<ScatterTextPayload />
 			</div>
 		</div>
 	);

@@ -39,6 +39,14 @@
 
 .bodyDiv {
 	padding-bottom: 500px;
+	background: rgb(2, 0, 36);
+	background: linear-gradient(
+		47deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(38, 66, 87, 1) 0%,
+		rgba(18, 33, 50, 1) 100%
+	);
+	color: white;
 }
 
 .listTitle {
@@ -49,6 +57,7 @@
 	margin-top: 100px;
 	text-align: left;
 	margin-left: 20px;
+	margin-right: 20px;
 }
 
 .SectionTitle {
@@ -112,3 +121,66 @@
 }
 
 /* --------------------- INPUT FIELD STYLES -------------------- */
+/*****/
+/*****/
+/*****/
+/*****/
+/*****/
+
+/* --------------------- CHECKBOX STYLES -------------------- */
+
+.checkboxLabel {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.hidden-checkbox {
+	display: none;
+}
+
+.checkbox {
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	border: 2px solid #007bff;
+	border-radius: 4px;
+	margin-right: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s;
+}
+
+.checkbox.checked {
+	background-color: #007bff;
+}
+
+.checkbox::after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	display: none;
+}
+
+.checkbox.checked::after {
+	display: block;
+	background-color: white;
+	border-radius: 2px;
+}
+
+/* --------------------- SCATTER TEXT STYLES -------------------- */
+
+.scatter-container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+
+.scatter-char {
+	position: absolute;
+	transition: all 1s ease-in-out;
+	font-size: 14px;
+	white-space: pre;
+}

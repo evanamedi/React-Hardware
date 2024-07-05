@@ -53,4 +53,14 @@ password : checks that input is greater than 6 characters
 ##### Changes
 
 handleChange : event handler that gets called when any input value is changed and updates the value/error state with the new input value
-# React-Hardware
+
+## Checkbox
+
+A basic checkbox that displays text and handles state
+
+checked : hold the current state (checked or !checked)
+setChecked : to update the checked state
+
+useState initializes the state to false
+
+handleCheckboxChange : toggles checked state and calls onChange if applicable
