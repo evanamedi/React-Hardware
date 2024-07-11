@@ -9,6 +9,10 @@ import ScatterTextPayload from "./components/displayText/ScatterTextPayload";
 import DropdownPayload from "./components/dropdown/DropdownPayload";
 import ModalDialogPayload from "./components/modalDialog/ModalDialogPayload";
 import TabsPayload from "./components/tabs/TabsPayload";
+import AccordionPayload from "./components/accordion/AccordionPayload";
+import SpinnerPayload from "./components/spinner/SpinnerPayload";
+import TooltipPayload from "./components/tooltip/TooltipPayload";
+import DataTablePayload from "./components/dataTable/DataTablePayload";
 
 function App() {
 	return (
@@ -23,6 +27,10 @@ function App() {
 					<DropdownPayload />
 					<ModalDialogPayload />
 					<TabsPayload />
+					<AccordionPayload />
+					<SpinnerPayload />
+					<TooltipPayload />
+					<DataTablePayload />
 					<TypingEffectPayload />
 					<ScatterTextPayload />
 				</div>

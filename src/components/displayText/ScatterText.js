@@ -73,7 +73,7 @@ const ScatterText = ({ text }) => {
 	return (
 		<div>
 			<div className="restartDiv">
-				<button onClick={restartEffect} className="restart">
+				<button onClick={restartEffect} className="button">
 					Restart
 				</button>
 			</div>

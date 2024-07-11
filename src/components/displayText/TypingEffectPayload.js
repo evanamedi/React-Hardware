@@ -70,7 +70,7 @@ const TypingEffect = ({ text, speed }) => {
 	return (
 		<div>
 			<div className="restartDiv">
-				<button onClick={rerunTypingEffect} className="restart">
+				<button onClick={rerunTypingEffect} className="button">
 					Restart
 				</button>
 			</div>
