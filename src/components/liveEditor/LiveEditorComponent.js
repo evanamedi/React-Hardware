@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import ReactDom from "react-dom";
 import PropTypes from "prop-types";
 import {
 	LiveProvider,
@@ -8,21 +9,26 @@ import {
 } from "react-live";
 import Tabs from "../tabs/Tabs";
 
-const scope = { React, useState, useEffect, PropTypes };
+const scope = { React, useState, useEffect, useRef, PropTypes, ReactDom };
 
 const LiveEditorComponent = ({ initialCode, initialCSS }) => {
 	const [code, setCode] = useState(initialCode);
 	const [cssCode, setCssCode] = useState(initialCSS);
 
 	useEffect(() => {
-		let styleElement = document.getElementById("dynamic-styles");
-		if (!styleElement) {
-			styleElement = document.createElement("style");
-			styleElement.id = "dynamic-styles";
-			document.head.appendChild(styleElement);
-		}
+		const styleElement = document.createElement("style");
+		styleElement.id = "dynamic-styles";
+		document.head.appendChild(styleElement);
 		styleElement.textContent = cssCode;
+
+		return () => {
+			document.head.removeChild(styleElement);
+		};
 	}, [cssCode]);
+
+	useEffect(() => {
+		setCssCode(initialCSS);
+	}, [initialCSS]);
 
 	const handleKeyDown = (e) => {
 		if (e.key === "Tab") {

@@ -29,7 +29,7 @@ return (
 };
 
 render(<Checkbox  label="Accept terms and conditions" />);
-    `;
+`;
 
 	const initialCSS = `
 .hello-world {

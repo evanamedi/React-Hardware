@@ -4,10 +4,17 @@
 
 @media (prefers-reduced-motion: no-preference) {
 	.App-logo {
-		animation: App-logo-spin infinite 10s linear;
-		height: 100px;
-		margin-bottom: 400px;
+		animation: App-logo-spin infinite 20s linear;
+		height: 300px;
+		z-index: 0;
+		position: absolute;
+		opacity: 10%;
 	}
+}
+
+.reactLogo {
+	display: flex;
+	justify-content: center;
 }
 
 @keyframes App-logo-spin {
@@ -17,6 +24,19 @@
 	to {
 		transform: rotate(360deg);
 	}
+}
+
+.restart {
+	width: 70px;
+	font-size: 15px;
+	padding: 2px;
+	border-radius: 10px;
+}
+
+.restartDiv {
+	width: 100%;
+	margin-top: 4px;
+	margin-bottom: 4px;
 }
 
 .bodyDiv {
@@ -39,11 +59,19 @@
 	align-items: center;
 }
 
-.listTitle {
+.title {
 	font-size: 50px;
-	font-weight: 100;
-	padding-top: 100px;
+	font-weight: 300;
+	z-index: 20;
+	position: relative;
+	padding-top: 64px;
+	color: white;
+}
+
+.titleDiv {
+	margin-bottom: 600px;
 	margin-top: 0;
+	padding-top: 200px;
 }
 
 .sectionDiv {
@@ -67,7 +95,7 @@
 	margin-top: 100px;
 }
 
-/* --------------------- BUTTON STYLES -------------------- */
+/* --------------------- BUTTON STYLES -------------------- 
 
 .buttonLayout {
 	display: flex;
@@ -121,6 +149,7 @@
 .btn:hover {
 	opacity: 0.8;
 }
+*/
 
 /* --------------------- INPUT FIELD STYLES -------------------- */
 /*****/
@@ -129,7 +158,7 @@
 /*****/
 /*****/
 
-/* --------------------- CHECKBOX STYLES -------------------- */
+/* --------------------- CHECKBOX STYLES -------------------- 
 
 .checkboxLabel {
 	display: flex;
@@ -171,26 +200,31 @@
 	background-color: white;
 	border-radius: 2px;
 }
+*/
 
 /* --------------------- SCATTER TEXT STYLES -------------------- */
 
 .scatter-container {
 	position: relative;
 	width: 100%;
-	height: 100vh;
+	height: 200px;
 }
-
+/*
 .scatter-char {
 	position: absolute;
 	transition: all 1s ease-in-out;
 	font-size: 14px;
 	white-space: pre;
 }
+*/
 
-/* --------------------- Dropdown Selection-------------------- */
-/* SelectDropdown.css */
+.display-text {
+	height: 200px;
+}
+
+/* --------------------- Dropdown Selection-------------------- 
 .select-dropdown {
-	width: 100px;
+	width: 150px;
 	margin: 10px 0;
 }
 
@@ -204,7 +238,7 @@
 }
 
 .select-dropdown select:focus {
-	border-color: #eeff00;
+	border-color: #00bbff;
 	outline: none;
 }
 
@@ -212,7 +246,9 @@
 	padding: 10px;
 }
 
-/* --------------------- Modal Menu -------------------- */
+*/
+
+/* --------------------- Modal Menu -------------------- 
 
 .modal-overlay {
 	position: fixed;
@@ -231,7 +267,7 @@
 	border-radius: 5px;
 	width: 500px;
 	max-width: 80%;
-	padding: 20px;
+	padding: 0 20px 20px 20px;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -293,6 +329,8 @@
 	max-width: 1200px;
 	margin-bottom: 300px;
 }
+*/
+
 /* --------------------- Tabs -------------------- */
 
 .tabs-container {
@@ -327,7 +365,7 @@
 }
 
 .tab-content {
-	color: #000;
+	color: white;
 	border-radius: 5px;
 	border: none;
 	max-width: 100%;

@@ -1,18 +1,88 @@
 import React from "react";
-import Checkbox from "./Checkbox";
+import LiveEditorComponent from "../liveEditor/LiveEditorComponent";
 
 export default function CheckboxPayload() {
-	const handleCheckboxChange = (newCheckedState) => {
-		console.log("Checkbox is now: ", newCheckedState);
+	const initialCode = `
+const Checkbox = ({ label, onChange }) => {
+const [checked, setChecked] = useState(false);
+
+const handleCheckboxChange = () => {
+		setChecked(!checked);
+		if (onChange) {
+			onChange(!checked);
+		}
 	};
 
-	return (
-		<div className="sectionDiv">
-			<p className="SectionTitle">Checkbox</p>
-			<Checkbox
-				label="Accept Terms and Conditions"
+return (
+		<label className="checkboxLabel">
+			<input
+				type="checkbox"
+				checked={checked}
 				onChange={handleCheckboxChange}
+				className="hidden-checkbox"
 			/>
+			<span
+				className={\`checkbox \${checked ? "checked" : ""}\`}></span>
+			{label}
+		</label>
+	);
+};
+
+render(<Checkbox  label="Accept terms and conditions" />);
+    `;
+
+	const initialCSS = `
+.checkboxLabel {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.hidden-checkbox {
+	display: none;
+}
+
+.checkbox {
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	border: 2px solid #007bff;
+	border-radius: 4px;
+	margin-right: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s;
+}
+
+.checkbox.checked {
+	background-color: #007bff;
+}
+
+.checkbox::after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	display: none;
+}
+
+.checkbox.checked::after {
+	display: block;
+	background-color: white;
+	border-radius: 2px;
+}
+`;
+
+	return (
+		<div className="width">
+			<p className="SectionTitle">Check Box</p>
+			<div className="sectionDiv">
+				<LiveEditorComponent
+					initialCode={initialCode}
+					initialCSS={initialCSS}
+				/>
+			</div>
 		</div>
 	);
 }

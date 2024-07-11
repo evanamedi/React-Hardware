@@ -1,7 +1,7 @@
-import React, { Children, useState } from "react";
+import React from "react";
 import ReactDom from "react-dom";
 
-const ModalDialog = ({ isOpen, onClose, title, Children }) => {
+const ModalDialog = ({ isOpen, onClose, title }) => {
 	if (!isOpen) {
 		return null;
 	}

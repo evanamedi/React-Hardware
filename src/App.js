@@ -9,7 +9,6 @@ import ScatterTextPayload from "./components/displayText/ScatterTextPayload";
 import DropdownPayload from "./components/dropdown/DropdownPayload";
 import ModalDialogPayload from "./components/modalDialog/ModalDialogPayload";
 import TabsPayload from "./components/tabs/TabsPayload";
-import LiveEditorComponentPayload from "./components/liveEditor/LiveEditorComponentPayload";
 
 function App() {
 	return (
@@ -24,7 +23,6 @@ function App() {
 					<DropdownPayload />
 					<ModalDialogPayload />
 					<TabsPayload />
-					<LiveEditorComponentPayload />
 					<TypingEffectPayload />
 					<ScatterTextPayload />
 				</div>
