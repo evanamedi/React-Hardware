@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Title from "./components/title/Title";
 import ButtonPayload from "./components/buttons/ButtonPayload";
@@ -7,31 +6,28 @@ import CheckboxPayload from "./components/checkbox/CheckboxPayload";
 import RadioButtonsPayload from "./components/radioButtons/RadioButtonsPayload";
 import TypingEffectPayload from "./components/displayText/TypingEffectPayload";
 import ScatterTextPayload from "./components/displayText/ScatterTextPayload";
+import DropdownPayload from "./components/dropdown/DropdownPayload";
+import ModalDialogPayload from "./components/modalDialog/ModalDialogPayload";
+import TabsPayload from "./components/tabs/TabsPayload";
+import LiveEditorComponentPayload from "./components/liveEditor/LiveEditorComponentPayload";
 
 function App() {
 	return (
 		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer">
-					Learn React
-				</a>
-			</header>
 			<div className="bodyDiv">
 				<Title />
-				<ButtonPayload />
-				<InputFieldPayload />
-				<CheckboxPayload />
-				<RadioButtonsPayload />
-				<TypingEffectPayload />
-				<ScatterTextPayload />
+				<div className="mainBody">
+					<ButtonPayload />
+					<InputFieldPayload />
+					<CheckboxPayload />
+					<RadioButtonsPayload />
+					<DropdownPayload />
+					<ModalDialogPayload />
+					<TabsPayload />
+					<LiveEditorComponentPayload />
+					<TypingEffectPayload />
+					<ScatterTextPayload />
+				</div>
 			</div>
 		</div>
 	);
