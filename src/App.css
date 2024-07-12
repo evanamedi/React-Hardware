@@ -77,7 +77,7 @@
 .sectionDiv {
 	margin-top: 50px;
 	text-align: left;
-	border: 2px solid rgb(1, 140, 155);
+	border: 2px solid rgb(46, 68, 70);
 	border-radius: 10px;
 	width: 90%;
 }
@@ -376,7 +376,7 @@
 
 .tabs {
 	display: flex;
-	background: linear-gradient(180deg, rgb(0, 62, 77), rgb(0, 35, 41));
+	background: linear-gradient(180deg, rgb(0, 36, 45), rgb(0, 52, 61));
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 }
@@ -404,7 +404,6 @@
 
 .tab-content {
 	color: white;
-
 	border-radius: 5px;
 	border: none;
 	max-width: 100%;
@@ -440,13 +439,22 @@
 }
 
 .livePreview {
-	background: linear-gradient(360deg, #ffffff, #bababa);
+	background: #101c20;
 	min-height: 100px;
 	border-bottom-left-radius: 8px;
 	border-bottom-right-radius: 8px;
 	padding: 10px;
 	padding-top: 30px;
 	color: black;
+}
+
+.live-error {
+	background: #4f3d3d;
+	padding: 10px;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: rgb(255, 122, 122);
+	font-weight: 900;
 }
 
 /* --------------------- Accordion -------------------- */
@@ -620,5 +628,66 @@ th:hover {
 .pagination-buttons button:disabled {
 	background-color: #747474;
 	cursor: pointer;
+}
+*/
+
+/* --------------------- Form -------------------- */
+/*
+.custom-form .form-group {
+	margin-bottom: 15px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.custom-form .label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.custom-form .required {
+	color: red;
+}
+
+.custom-form input,
+.custom-form textarea {
+	padding: 8px;
+	box-sizing: border-box;
+	max-width: 400px;
+}
+
+.custom-form .input-error {
+	border: 2px solid red;
+}
+
+.custom-form .tooltip {
+	position: absolute;
+	top: -25px;
+	left: 0;
+	background-color: #ffdddd;
+	color: red;
+	padding: 5px;
+	border: 1px solid red;
+	border-radius: 3px;
+	font-size: 12px;
+	white-space: nowrap;
+	z-index: 10;
+}
+
+.custom-form button {
+	padding: 10px 15px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.custom-form button:hover {
+	background-color: #0056b3;
+}
+
+.custom-form {
+	max-width: 400px;
 }
 */

@@ -70,7 +70,7 @@ render(<TooltipDeploy />);
 
 	return (
 		<div className="width">
-			<p className="SectionTitle">ToolTip</p>
+			<p className="SectionTitle">Tool Tip</p>
 			<div className="sectionDiv">
 				<LiveEditorComponent
 					initialCode={initialCode}

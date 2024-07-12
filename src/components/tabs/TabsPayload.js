@@ -112,7 +112,7 @@ const TabsDeploy = () => {
 
 	return (
 		<div className="width">
-			<p className="SectionTitle">Tabception</p>
+			<p className="SectionTitle">Tabs</p>
 			<div className="sectionDiv">
 				<LiveEditorComponent
 					initialCode={initialCode}

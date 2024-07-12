@@ -13,6 +13,7 @@ import AccordionPayload from "./components/accordion/AccordionPayload";
 import SpinnerPayload from "./components/spinner/SpinnerPayload";
 import TooltipPayload from "./components/tooltip/TooltipPayload";
 import DataTablePayload from "./components/dataTable/DataTablePayload";
+import FormPayload from "./components/form/FormPayload";
 
 function App() {
 	return (
@@ -31,6 +32,7 @@ function App() {
 					<SpinnerPayload />
 					<TooltipPayload />
 					<DataTablePayload />
+					<FormPayload />
 					<TypingEffectPayload />
 					<ScatterTextPayload />
 				</div>

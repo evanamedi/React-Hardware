@@ -7,6 +7,7 @@ import {
 	LiveError,
 	LivePreview,
 } from "react-live";
+import { themes } from "prism-react-renderer";
 import Tabs from "../tabs/Tabs";
 
 const scope = { React, useState, useEffect, useRef, PropTypes, ReactDom };
@@ -55,7 +56,7 @@ const LiveEditorComponent = ({ initialCode, initialCSS }) => {
 					<LiveEditor
 						value={code}
 						onChange={(newCode) => setCode(newCode)}
-						className="prism-tomorrow line-numbers"
+						theme={themes.okaidia}
 					/>
 				</div>
 			),
@@ -64,7 +65,6 @@ const LiveEditorComponent = ({ initialCode, initialCSS }) => {
 			label: "CSS",
 			content: (
 				<textarea
-					className="prism-tomorrow"
 					style={{
 						width: "100%",
 						height: "100%",
@@ -72,7 +72,7 @@ const LiveEditorComponent = ({ initialCode, initialCSS }) => {
 						fontFamily: "monospace",
 						resize: "none",
 						border: "none",
-						background: "#061626",
+						background: "#00171d",
 						color: "white",
 						padding: "10px",
 						boxSizing: "border-box",
@@ -90,7 +90,9 @@ const LiveEditorComponent = ({ initialCode, initialCSS }) => {
 		<div>
 			<LiveProvider code={code} scope={scope} noInline={true}>
 				<Tabs tabs={tabs} />
-				<LiveError />
+				<div className="live-error-div">
+					<LiveError className="live-error" />
+				</div>
 				<div className="livePreview">
 					<LivePreview />
 				</div>
