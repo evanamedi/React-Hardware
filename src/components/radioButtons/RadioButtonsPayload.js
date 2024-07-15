@@ -61,13 +61,10 @@ export default function RadioButtonsPayload() {
 render(<RadioButtons />);
 	`;
 
-	const initialCSS = `
-
-	`;
+	const initialCSS = ``;
 
 	return (
 		<div className="width">
-			<p className="SectionTitle">Radio Buttons</p>
 			<div className="sectionDiv">
 				<LiveEditorComponent
 					initialCode={initialCode}

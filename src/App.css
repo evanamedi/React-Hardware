@@ -27,9 +27,9 @@
 }
 
 .button {
-	width: 100px;
+	width: auto;
 	font-size: 15px;
-	padding: 2px;
+	padding: 4px;
 	border-radius: 10px;
 }
 
@@ -75,24 +75,11 @@
 }
 
 .sectionDiv {
-	margin-top: 50px;
 	text-align: left;
 	border: 2px solid rgb(46, 68, 70);
 	border-radius: 10px;
 	width: 90%;
-}
-
-.SectionTitle {
-	font-size: 30px;
-	font-weight: 900;
-	text-align: left;
-	margin-top: 0;
-	margin-bottom: 0;
-	margin-left: 20px;
-	padding-top: 6px;
-	padding-left: 4px;
-	color: #b5b3b3;
-	margin-top: 100px;
+	margin-top: 40px;
 }
 
 .list {
@@ -132,6 +119,16 @@
 	cursor: pointer;
 	color: white;
 }
+
+.width {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1200px;
+	margin-bottom: 300px;
+}
+
 /* --------------------- BUTTON STYLES -------------------- 
 
 .buttonLayout {
@@ -358,14 +355,7 @@
 	background: #0056b3;
 }
 
-.width {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	max-width: 1200px;
-	margin-bottom: 300px;
-}
+
 */
 
 /* --------------------- Tabs -------------------- */
@@ -406,7 +396,7 @@
 	color: white;
 	border-radius: 5px;
 	border: none;
-	max-width: 100%;
+	width: 100%;
 	height: 400px;
 	min-height: 300px;
 	overflow: scroll;
@@ -423,6 +413,7 @@
 	height: 100%;
 	min-height: 300px;
 	background: #1f262d;
+	width: 100%;
 }
 /* --------------------- Live Editor -------------------- */
 
@@ -445,16 +436,33 @@
 	border-bottom-right-radius: 8px;
 	padding: 10px;
 	padding-top: 30px;
-	color: black;
+	color: white;
+	border-top: 1px solid white;
 }
 
 .live-error {
 	background: #4f3d3d;
 	padding: 10px;
-	margin-top: 0;
+	margin-top: -30px;
 	margin-bottom: 0;
 	color: rgb(255, 122, 122);
 	font-weight: 900;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+.css-text-area {
+	width: 100%;
+	height: 100%;
+	min-height: 250px;
+	font-family: monospace;
+	resize: none;
+	border: none;
+	background: #101c20;
+	color: white;
+	padding: 10px;
+	box-sizing: border-box;
+	outline: none;
 }
 
 /* --------------------- Accordion -------------------- */
@@ -691,3 +699,174 @@ th:hover {
 	max-width: 400px;
 }
 */
+
+/* --------------------- Toast -------------------- */
+/*
+.toast-container {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	z-index: 9999;
+}
+
+.toast {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	border-radius: 5px;
+	color: white;
+	background-color: #333;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	animation: slide-in 0.5s ease;
+}
+
+.toast.success {
+	background-color: #4caf50;
+}
+
+.toast.error {
+	background-color: #f44336;
+}
+
+.toast .close-button {
+	background: none;
+	border: none;
+	color: white;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+@keyframes slide-in {
+	from {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+*/
+
+/* --------------------- Toast -------------------- */
+
+.sliding-menu-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.sliding-menu {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	overflow: hidden;
+	width: 100%;
+	justify-content: center;
+}
+
+.options-wrapper {
+	display: flex;
+	overflow-x: hidden;
+}
+
+.options-list {
+	display: flex;
+	transition: transform 0.5s ease;
+	margin-right: 5px;
+	margin-left: 5px;
+	overflow-x: scroll;
+	padding-left: 5px;
+}
+
+.option {
+	flex: 0 0 100px;
+	margin: 5px;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid #00fff2;
+	transition: transform 0.3s ease;
+	color: white;
+	border-radius: 10px;
+}
+
+.option.selected {
+	transform: scale(1.1);
+	background-color: #007973;
+	border-radius: 10px;
+}
+
+.nav-button {
+	background: none;
+	border-radius: 50%;
+	color: white;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	font-size: 16px;
+	margin: 2px;
+	width: 50px;
+}
+
+.content {
+	text-align: center;
+	margin-top: 20px;
+}
+
+/* --------------------- Sliding Menu  -------------------- */
+
+.slidingMenu {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.content-toggle-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 800px;
+}
+
+.buttons-container {
+	display: flex;
+	overflow-x: auto;
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.toggle-button {
+	flex: 0 0 auto;
+	margin: 0 10px;
+	padding: 10px 20px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	transition: background-color 0.3s;
+	background: none;
+	border: 1px solid #00fff2;
+	color: white;
+	border-radius: 10px;
+	font-weight: 900;
+}
+
+.toggle-button.active {
+	background-color: #007973; /* Background color for the active button */
+	color: white; /* Text color for the active button */
+}
+
+.content-container {
+	margin-top: 0;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 20px;
+	height: 600px;
+}

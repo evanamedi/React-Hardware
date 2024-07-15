@@ -85,7 +85,6 @@ render(<InputFieldDeploy />);
 
 	return (
 		<div className="width">
-			<p className="SectionTitle">Input Field</p>
 			<div className="sectionDiv">
 				<LiveEditorComponent
 					initialCode={initialCode}

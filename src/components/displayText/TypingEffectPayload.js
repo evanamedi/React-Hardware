@@ -2,8 +2,7 @@ import React from "react";
 import LiveEditorComponent from "../liveEditor/LiveEditorComponent";
 
 export default function TypingEffectPayload() {
-	const initialCode = `
-const useTypingEffect = (text, speed, startTyping) => {
+	const initialCode = `const useTypingEffect = (text, speed, startTyping) => {
 	const [displayedText, setDisplayedText] = useState("");
 	const index = useRef(0);
 
@@ -99,7 +98,6 @@ render(<TypingEffectDeploy />);
 
 	return (
 		<div className="width">
-			<p className="SectionTitle">Typing Effect</p>
 			<div className="sectionDiv">
 				<LiveEditorComponent
 					initialCode={initialCode}

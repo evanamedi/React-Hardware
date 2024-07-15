@@ -15,6 +15,7 @@ export default function Title() {
 		"Tool Tip",
 		"Data Table",
 		"Form",
+		"Toast",
 		"Typing Effect",
 		"Text Scatter Effect",
 	];
@@ -26,6 +27,7 @@ export default function Title() {
 					<img src={logo} className="App-logo" alt="logo" />
 				</div>
 				<p className="title">React Hardware Library</p>
+				<p>Free | Lightweight | Customizable | Reusable</p>
 			</div>
 			<div className="list">
 				<p className="githubrepo">GitHub Repo</p>

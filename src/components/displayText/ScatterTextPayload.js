@@ -2,8 +2,7 @@ import React from "react";
 import LiveEditorComponent from "../liveEditor/LiveEditorComponent";
 
 export default function ScatterTextPayload() {
-	const initialCode = `
-const ScatterText = ({ text }) => {
+	const initialCode = `const ScatterText = ({ text }) => {
 	const [positions, setPositions] = useState([]);
 	const [assembled, setAssembled] = useState(false);
 	const containerRef = useRef(null);
@@ -121,7 +120,6 @@ render(<ScatterTextDeploy />);
 
 	return (
 		<div className="width">
-			<p className="SectionTitle">Scatter Effect</p>
 			<div className="sectionDiv">
 				<LiveEditorComponent
 					initialCode={initialCode}

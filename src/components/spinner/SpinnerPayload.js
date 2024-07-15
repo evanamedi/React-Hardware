@@ -2,8 +2,7 @@ import React from "react";
 import LiveEditorComponent from "../liveEditor/LiveEditorComponent";
 
 const SpinnerPayload = () => {
-	const initialCode = `
-const Spinner = () => {
+	const initialCode = `const Spinner = () => {
 	return (
 		<div className="spinner-overlay">
 			<div className="spinner"></div>
@@ -74,7 +73,6 @@ render(<SpinnerDeploy />);
 `;
 	return (
 		<div className="width">
-			<p className="SectionTitle">Spinner</p>
 			<div className="sectionDiv">
 				<LiveEditorComponent
 					initialCode={initialCode}

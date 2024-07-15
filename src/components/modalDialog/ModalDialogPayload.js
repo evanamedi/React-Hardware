@@ -52,8 +52,7 @@ const ModalDeploy = () => {
 	render(<ModalDeploy />);
 	`;
 
-	const initialCSS = `
-.modal-overlay {
+	const initialCSS = `.modal-overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -124,19 +123,10 @@ const ModalDeploy = () => {
 	background: #0056b3;
 }
 
-.width {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	max-width: 1200px;
-	margin-bottom: 300px;
-}
 `;
 
 	return (
 		<div className="width">
-			<p className="SectionTitle">Modal Dialog</p>
 			<div className="sectionDiv">
 				<LiveEditorComponent
 					initialCode={initialCode}

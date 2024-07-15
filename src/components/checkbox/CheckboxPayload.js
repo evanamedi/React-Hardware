@@ -31,8 +31,7 @@ return (
 render(<Checkbox  label="Accept terms and conditions" />);
     `;
 
-	const initialCSS = `
-.checkboxLabel {
+	const initialCSS = `.checkboxLabel {
 	display: flex;
 	align-items: center;
 	cursor: pointer;
@@ -76,7 +75,6 @@ render(<Checkbox  label="Accept terms and conditions" />);
 
 	return (
 		<div className="width">
-			<p className="SectionTitle">Check Box</p>
 			<div className="sectionDiv">
 				<LiveEditorComponent
 					initialCode={initialCode}

@@ -53,8 +53,7 @@ const DropDownDeploy = () => {
 render(<DropDownDeploy />);
 	`;
 
-	const initialCSS = `
-.select-dropdown {
+	const initialCSS = `.select-dropdown {
 	width: 150px;
 	margin: 10px 0;
 }
@@ -80,7 +79,6 @@ render(<DropDownDeploy />);
 
 	return (
 		<div className="width">
-			<p className="SectionTitle">Dropdown Selection</p>
 			<div className="sectionDiv">
 				<LiveEditorComponent
 					initialCode={initialCode}

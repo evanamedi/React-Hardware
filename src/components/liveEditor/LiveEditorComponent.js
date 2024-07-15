@@ -1,12 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactDom from "react-dom";
 import PropTypes from "prop-types";
-import {
-	LiveProvider,
-	LiveEditor,
-	LiveError,
-	LivePreview,
-} from "react-live";
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import { themes } from "prism-react-renderer";
 import Tabs from "../tabs/Tabs";
 
@@ -65,19 +60,7 @@ const LiveEditorComponent = ({ initialCode, initialCSS }) => {
 			label: "CSS",
 			content: (
 				<textarea
-					style={{
-						width: "100%",
-						height: "100%",
-						minHeight: "250px",
-						fontFamily: "monospace",
-						resize: "none",
-						border: "none",
-						background: "#00171d",
-						color: "white",
-						padding: "10px",
-						boxSizing: "border-box",
-						outline: "none",
-					}}
+					className="css-text-area"
 					value={cssCode}
 					onChange={(e) => setCssCode(e.target.value)}
 					onKeyDown={handleKeyDown}
@@ -90,11 +73,10 @@ const LiveEditorComponent = ({ initialCode, initialCSS }) => {
 		<div>
 			<LiveProvider code={code} scope={scope} noInline={true}>
 				<Tabs tabs={tabs} />
-				<div className="live-error-div">
-					<LiveError className="live-error" />
-				</div>
+				<div className="live-error-div"></div>
 				<div className="livePreview">
 					<LivePreview />
+					<LiveError className="live-error" />
 				</div>
 			</LiveProvider>
 		</div>

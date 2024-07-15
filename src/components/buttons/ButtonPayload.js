@@ -91,9 +91,7 @@ const ButtonDeploy = () => {
 render(<ButtonDeploy />);
 	`;
 
-	const initialCSS = `
-
-.buttonLayout {
+	const initialCSS = `.buttonLayout {
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -149,7 +147,6 @@ render(<ButtonDeploy />);
 
 	return (
 		<div className="width">
-			<p className="SectionTitle">Buttons</p>
 			<div className="sectionDiv">
 				<LiveEditorComponent
 					initialCode={initialCode}

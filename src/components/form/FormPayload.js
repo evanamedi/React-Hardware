@@ -2,8 +2,7 @@ import React from "react";
 import LiveEditorComponent from "../liveEditor/LiveEditorComponent";
 
 export default function FormPayload() {
-	const initialCode = `
-const validateEmail = (email) => {
+	const initialCode = `const validateEmail = (email) => {
 	const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$/;
 	return re.test(String(email).toLowerCase());
 };
@@ -231,7 +230,6 @@ render(<Form />)
 
 	return (
 		<div className="width">
-			<p className="SectionTitle">Form</p>
 			<div className="sectionDiv">
 				<LiveEditorComponent
 					initialCode={initialCode}

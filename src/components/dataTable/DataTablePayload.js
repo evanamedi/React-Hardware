@@ -2,7 +2,7 @@ import React from "react";
 import LiveEditorComponent from "../liveEditor/LiveEditorComponent";
 
 const DataTablePayload = () => {
-	const initialCode = `
+	const initialCode = `// test data
 const SampleData = [
 	{ id: 1, name: "Alice", age: 25 },
 	{ id: 2, name: "Bob", age: 30 },
@@ -165,7 +165,6 @@ th:hover {
 
 	return (
 		<div className="width">
-			<p className="SectionTitle">Data Table</p>
 			<div className="sectionDiv">
 				<LiveEditorComponent
 					initialCode={initialCode}

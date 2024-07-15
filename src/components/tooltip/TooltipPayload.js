@@ -2,8 +2,7 @@ import React from "react";
 import LiveEditorComponent from "../liveEditor/LiveEditorComponent";
 
 const TooltipPayload = () => {
-	const initialCode = `
-const Tooltip = ({ children, text }) => {
+	const initialCode = `const Tooltip = ({ children, text }) => {
 	return (
 		<div className="tooltip">
 			{children}
@@ -70,7 +69,6 @@ render(<TooltipDeploy />);
 
 	return (
 		<div className="width">
-			<p className="SectionTitle">Tool Tip</p>
 			<div className="sectionDiv">
 				<LiveEditorComponent
 					initialCode={initialCode}

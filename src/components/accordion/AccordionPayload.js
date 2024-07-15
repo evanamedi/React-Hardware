@@ -2,8 +2,7 @@ import React from "react";
 import LiveEditorComponent from "../liveEditor/LiveEditorComponent";
 
 export default function AccordionPayload() {
-	const initialCode = `
-const AccordionItem = ({ title, content, isOpen, onClick }) => {
+	const initialCode = `const AccordionItem = ({ title, content, isOpen, onClick }) => {
 	return (
 		<div className="accordion-item">
 			<div className="accordion-header" onClick={onClick}>
@@ -91,6 +90,7 @@ render(<Accordion items={items} />)
 	cursor: pointer;
 	background-color: #f7f7f7;
 	border-radius: 10px;
+	color: black;
 }
 
 .accordion-content {
@@ -99,12 +99,12 @@ render(<Accordion items={items} />)
 	background-color: #cccccc;
 	border-radius: 10px;
 	height: 100px;
+	color: black;
 }
     
     `;
 	return (
 		<div className="width">
-			<p className="SectionTitle">Accordion</p>
 			<div className="sectionDiv">
 				<LiveEditorComponent
 					initialCode={initialCode}
