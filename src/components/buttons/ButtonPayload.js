@@ -102,7 +102,7 @@ render(<ButtonDeploy />);
 
 .btn {
 	border: none;
-	border-radius: 4px;
+	border-radius: 10px;
 	padding: 0.5 1em;
 	cursor: pointer;
 	transition: background-color 0.3s;
@@ -114,17 +114,20 @@ render(<ButtonDeploy />);
 }
 
 .btn-primary {
-	background-color: #007bff;
+	background-color: #1e970039;
+	border: 1px solid #1e9700;
 	color: #fff;
 }
 
 .btn-secondary {
-	background-color: #6c757d;
+	background-color: #0162b63f;
+	border: 1px solid #0161b6;
 	color: #fff;
 }
 
 .btn-danger {
-	background-color: #dc3545;
+	background-color: #dc35463d;
+	border: 1px solid #dc3545;
 	color: #fff;
 }
 

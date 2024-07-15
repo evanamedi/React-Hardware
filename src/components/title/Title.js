@@ -2,7 +2,23 @@ import React from "react";
 import logo from "../../logo.svg";
 
 export default function Title() {
-	const itemList = [
+	return (
+		<div className="titleDiv">
+			<div>
+				<div className="reactLogo">
+					<img src={logo} className="App-logo" alt="logo" />
+				</div>
+				<p className="title">React Hardware Library</p>
+				<p className="titleDescription">
+					Free | Lightweight | Customizable | Reusable
+				</p>
+			</div>
+		</div>
+	);
+}
+
+/*
+const itemList = [
 		"Buttons",
 		"Input Field",
 		"Check Box",
@@ -20,15 +36,7 @@ export default function Title() {
 		"Text Scatter Effect",
 	];
 
-	return (
-		<div className="titleDiv">
-			<div>
-				<div className="reactLogo">
-					<img src={logo} className="App-logo" alt="logo" />
-				</div>
-				<p className="title">React Hardware Library</p>
-				<p>Free | Lightweight | Customizable | Reusable</p>
-			</div>
+
 			<div className="list">
 				<p className="githubrepo">GitHub Repo</p>
 				<ul>
@@ -39,6 +47,4 @@ export default function Title() {
 					))}
 				</ul>
 			</div>
-		</div>
-	);
-}
+*/
