@@ -1,5 +1,9 @@
+body {
+	background: black;
+}
+
 .App {
-	text-align: center;
+	height: 100%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -52,7 +56,6 @@
 }
 
 .bodyDiv {
-	padding-bottom: 500px;
 	background: rgb(2, 0, 36);
 	background: linear-gradient(
 		90deg,
@@ -62,13 +65,14 @@
 	);
 	color: white;
 	width: 100%;
+	height: 100%;
+	text-align: center;
 }
 
 .mainBody {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	align-items: center;
 }
 
 .title {
@@ -840,6 +844,7 @@ th:hover {
 /* --------------------- Sliding Menu  -------------------- */
 
 .slidingMenu {
+	margin-top: 100px;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -857,8 +862,9 @@ th:hover {
 	display: flex;
 	overflow-x: auto;
 	width: 100%;
-	padding: 20px;
+	padding: 30px;
 	box-sizing: border-box;
+	margin-left: -20px;
 }
 
 .toggle-button {
@@ -920,4 +926,109 @@ th:hover {
 
 .after {
 	z-index: 2;
+}
+
+.mainNavDiv {
+	position: relative;
+	background: linear-gradient(
+		90deg,
+		rgb(0, 10, 14) 10%,
+		rgb(0, 24, 30) 80%,
+		rgb(0, 35, 41) 100%
+	);
+}
+
+.navButtonDiv {
+	position: relative;
+	display: flex;
+	justify-content: end;
+	background: linear-gradient(
+		90deg,
+		rgb(18, 18, 18) 10%,
+		rgb(16, 16, 16) 80%
+	);
+	height: 50px;
+}
+
+.menuButton {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.menuIcon {
+	padding: 4px;
+	background: none;
+	border-radius: 6px;
+	width: 30px;
+	height: 30px;
+	transition: transform 0.3s ease;
+	box-shadow: 0px 0px 2px 0px rgb(97, 97, 97);
+}
+
+.menuIcon:hover {
+	box-shadow: 0px 0px 2px 0px rgb(255, 255, 255);
+}
+
+.Nav {
+	position: absolute;
+	opacity: 0;
+	max-height: 0;
+	width: 100%;
+	padding-bottom: 10px;
+	overflow: hidden;
+	transition: max-height 0.5s ease;
+	background: linear-gradient(
+		90deg,
+		rgb(18, 18, 18) 10%,
+		rgb(16, 16, 16) 80%
+	);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.Nav.open {
+	opacity: 1;
+	max-height: 200px;
+	background: linear-gradient(
+		90deg,
+		rgb(18, 18, 18) 10%,
+		rgb(16, 16, 16) 80%
+	);
+	transition: box-shadow 0.1s ease-in-out;
+	box-shadow: 0px 20px 10px 2px rgba(0, 0, 0, 0.551);
+}
+
+.navLink {
+	display: block;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	font-size: 20px;
+	border-radius: 6px;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	background: black;
+	width: 90%;
+	background: linear-gradient(
+		90deg,
+		rgb(18, 18, 18) 10%,
+		rgb(16, 16, 16) 80%
+	);
+}
+
+.navLink:hover {
+	background: #3a3a3a;
+}
+
+.home {
+	height: 100vh;
+}
+
+.para {
+	margin-top: 100px;
+	font-size: 20px;
 }

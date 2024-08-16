@@ -1,17 +1,24 @@
 import "./App.css";
-import Title from "./components/title/Title";
-import SlidingMenu from "./components/slidingMenu/SlidingMenu";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import NavMenu from "./components/NavMenu";
+import Home from "../src/components/pages/Home";
+import Components from "./components/pages/Components";
 
 function App() {
 	return (
-		<div className="App">
-			<div className="bodyDiv">
-				<Title />
-				<div className="mainBody">
-					<SlidingMenu />
+		<Router>
+			<div className="App">
+				<header>
+					<NavMenu />
+				</header>
+				<div className="bodyDiv">
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/components" element={<Components />} />
+					</Routes>
 				</div>
 			</div>
-		</div>
+		</Router>
 	);
 }
 
