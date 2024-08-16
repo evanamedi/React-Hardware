@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavMenu from "./components/NavMenu";
 import Home from "../src/components/pages/Home";
 import Components from "./components/pages/Components";
+import Documentation from "./components/pages/Documentation";
 
 function App() {
 	return (
@@ -14,7 +15,11 @@ function App() {
 				<div className="bodyDiv">
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route path="/components" element={<Components />} />
+						<Route path="/hardware" element={<Components />} />
+						<Route
+							path="/documentation"
+							element={<Documentation />}
+						/>
 					</Routes>
 				</div>
 			</div>

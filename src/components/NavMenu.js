@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import logo from "../static/images/icons/build.png";
 import { Link } from "react-router-dom";
 import closeIcon from "../static/images/icons/closeMenu.png";
 import menuIcon from "../static/images/icons/menu.png";
@@ -30,6 +31,14 @@ export default function NavMenu() {
 
 	return (
 		<div className="mainNavDiv" ref={navRef}>
+			<div>
+				<Link to="/">
+					<img src={logo} className="App-logo" alt="logo" />
+				</Link>
+			</div>
+			<div className="navParaDiv">
+				<p className="navPara">This site is still under development.</p>
+			</div>
 			<div
 				className={`navButtonDiv ${
 					isMenuOpen ? "noBorder" : "border"
@@ -48,10 +57,16 @@ export default function NavMenu() {
 					Home
 				</Link>
 				<Link
-					to="/components"
+					to="/hardware"
 					className="navLink"
 					onClick={handleLinkClick}>
-					Components
+					Hardware
+				</Link>
+				<Link
+					to="/documentation"
+					className="navLink"
+					onClick={handleLinkClick}>
+					Documentation
 				</Link>
 			</div>
 		</div>

@@ -1,17 +1,40 @@
 import React from "react";
-import logo from "../../logo.svg";
+import { Link } from "react-router-dom";
 
 export default function Title() {
 	return (
 		<div className="titleDiv">
 			<div>
-				<div className="reactLogo">
-					<img src={logo} className="App-logo" alt="logo" />
-				</div>
-				<p className="title">React Hardware Library</p>
+				<p className="title">HL</p>
 				<p className="titleDescription">
 					Free | Lightweight | Customizable | Reusable
 				</p>
+				<div className="titleParaDiv">
+					<p className="titlePara">
+						HL is a React component library made for web
+						development. Each component provides the necessary code
+						to render, and its accompanying CSS.
+					</p>
+					<p className="titlePara">
+						On the{" "}
+						<Link to="/hardware" className="componentLink">
+							hardware
+						</Link>{" "}
+						page, you will find a full list of currently available
+						options. There you can experiment and live test each
+						component- including its code and css. Once you're
+						satisfied with its result, simple copy the code and
+						place it in your project.
+					</p>
+					<p className="titlePara">
+						Refer to the{" "}
+						<Link to="/documentation" className="componentLink">
+							documentation
+						</Link>{" "}
+						page for detailed information on how to use or modify
+						components.
+					</p>
+				</div>
 			</div>
 		</div>
 	);
